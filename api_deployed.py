@@ -218,10 +218,7 @@ async def predict_mask(file: UploadFile = File(...)):
 
 # ----------------------- Application's Running ----------------------------
 
-# listen application with this port
-port = int(os.getenv("WEBSITES_PORT", "8000"))
-
 if __name__ == '__main__': 
-    uvicorn.run(app, host='0.0.0.0', port=port)
+    uvicorn.run(app, port=8000)
     
 # --------------------------------------------------------------------------
